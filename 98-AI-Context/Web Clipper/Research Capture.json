@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Research Capture",
+  "behavior": "create",
+  "noteNameFormat": "{{date|date:\"YYYY-MM-DD\"}} {{title|safe_name}}",
+  "path": "00-Inbox/Downloaded",
+  "context": "{{content}}",
+  "properties": [
+    {"name": "type", "value": "source", "type": "text"},
+    {"name": "title", "value": "{{title}}", "type": "text"},
+    {"name": "source", "value": "{{site}}", "type": "text"},
+    {"name": "source_url", "value": "{{url}}", "type": "text"},
+    {"name": "author", "value": "{{author}}", "type": "text"},
+    {"name": "published", "value": "{{published}}", "type": "date"},
+    {"name": "captured", "value": "{{time}}", "type": "datetime"},
+    {"name": "tags", "value": "source/web-clipper, status/unprocessed", "type": "multitext"}
+  ],
+  "triggers": [],
+  "noteContentFormat": "# {{title}}\n\n> [!source] 来源\n> 网站：{{site}}  \n> 作者：{{author}}  \n> 发布时间：{{published}}  \n> 原文：{{url}}  \n> 采集时间：{{time}}\n\n## 原文\n\n{{content}}"
+}

@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+.trash/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+00-Inbox/Attachments/.DS_Store
+98-AI-Context/Reports/*.tmp
+

@@ -1,0 +1,19 @@
+{
+  "commitMessage": "vault: {{date}} ({{numFiles}} files)",
+  "autoCommitMessage": "vault auto-backup: {{date}} ({{numFiles}} files)",
+  "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
+  "autoSaveInterval": 15,
+  "autoPushInterval": 0,
+  "autoPullInterval": 15,
+  "autoPullOnBoot": true,
+  "autoCommitOnlyStaged": false,
+  "disablePush": false,
+  "pullBeforePush": true,
+  "showErrorNotices": true,
+  "disablePopupsForNoChanges": true,
+  "syncMethod": "merge",
+  "mergeStrategy": "none",
+  "autoBackupAfterFileChange": true,
+  "differentIntervalCommitAndPush": false,
+  "setLastSaveToLastCommit": true
+}
