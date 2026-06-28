@@ -15,4 +15,4 @@ tags: [domain/finance]
 - [[财资与现金管理/_Index|财资与现金管理]]
 - [[授信与风险识别/_Index|授信与风险识别]]
 
-相关主题：[[../Topic Hubs/Banking Hub]]、[[../Topic Hubs/Supply Chain Finance Hub]]。
+相关主题：[[../Topic Hubs/Banking Hub]]、[[../Topic Hubs/Bills Hub]]、[[../Topic Hubs/Supply Chain Finance Hub]]。

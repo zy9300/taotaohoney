@@ -1,14 +1,14 @@
 ---
 type: audit-report
-generated: "2026-06-28T17:21:19"
+generated: "2026-06-28T17:39:50"
 tags: [system/audit]
 ---
 # Knowledge Base Audit Report
 
 ## 摘要
 
-- 文件：224
-- Markdown 笔记：149
+- 文件：229
+- Markdown 笔记：154
 - 重复内容组：0
 - 分类冲突：0
 - 异常文件名：0
@@ -47,17 +47,18 @@ tags: [system/audit]
 
 ## 高频主题标签
 
-- `hub/topic`：24
+- `hub/topic`：25
+- `status/processed`：10
+- `topic/bills`：9
+- `topic/policy`：7
+- `topic/banking`：7
 - `topic/prompt`：7
 - `topic/workflow`：6
-- `status/processed`：6
 - `topic/codex`：5
-- `topic/policy`：5
-- `topic/banking`：5
+- `topic/macro`：5
+- `topic/supply-chain`：5
 - `status/idea`：4
 - `topic/claude-code`：3
-- `topic/macro`：3
-- `topic/supply-chain`：3
 - `topic/supply-chain-finance`：3
 - `topic/ai`：3
 - `topic/agent`：3
@@ -66,13 +67,12 @@ tags: [system/audit]
 - `topic/github`：3
 - `topic/knowledge-management`：3
 - `topic/content-creation`：3
-- `topic/agent-workflow`：2
 
 ## Research 内容扫描
 
 - 高频工具：Codex（60）、Obsidian（45）、GitHub（42）、MCP（13）、Claude Code（11）、MarkDownload（2）
 - 高频工作流：Workflow（22）、自动化（5）、Research Cleaner（3）、内容创作（2）、知识管理（1）
-- 高频商业模式：供应链金融（26）、平台（16）、商业模式（6）、变现（2）
+- 高频商业模式：供应链金融（27）、平台（16）、商业模式（6）、变现（2）
 - 高频平台：Obsidian（45）、GitHub（42）、公众号（13）、小红书（4）、课程（3）、播客（1）
 
 ## 建议
