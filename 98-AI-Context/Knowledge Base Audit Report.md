@@ -1,14 +1,14 @@
 ---
 type: audit-report
-generated: "2026-06-28T13:46:47"
+generated: "2026-06-28T17:21:19"
 tags: [system/audit]
 ---
 # Knowledge Base Audit Report
 
 ## 摘要
 
-- 文件：217
-- Markdown 笔记：142
+- 文件：224
+- Markdown 笔记：149
 - 重复内容组：0
 - 分类冲突：0
 - 异常文件名：0
@@ -48,32 +48,32 @@ tags: [system/audit]
 ## 高频主题标签
 
 - `hub/topic`：24
-- `topic/prompt`：5
-- `topic/workflow`：4
+- `topic/prompt`：7
+- `topic/workflow`：6
+- `status/processed`：6
+- `topic/codex`：5
+- `topic/policy`：5
+- `topic/banking`：5
 - `status/idea`：4
-- `status/needs-review`：2
-- `status/seed`：2
-- `status/unprocessed`：2
-- `domain/world`：1
-- `domain/industry`：1
-- `domain/enterprise`：1
-- `domain/finance`：1
-- `domain/ai`：1
-- `domain/human`：1
-- `domain/personal`：1
-- `domain/daily`：1
-- `topic/ai`：1
-- `topic/agent`：1
-- `topic/automation`：1
-- `topic/banking`：1
-- `topic/business-model`：1
+- `topic/claude-code`：3
+- `topic/macro`：3
+- `topic/supply-chain`：3
+- `topic/supply-chain-finance`：3
+- `topic/ai`：3
+- `topic/agent`：3
+- `topic/automation`：3
+- `topic/obsidian`：3
+- `topic/github`：3
+- `topic/knowledge-management`：3
+- `topic/content-creation`：3
+- `topic/agent-workflow`：2
 
 ## Research 内容扫描
 
-- 高频工具：Codex（13）、Obsidian（9）、MCP（8）、GitHub（7）、Claude Code（6）
-- 高频工作流：Workflow（11）、自动化（5）、知识管理（1）
-- 高频商业模式：商业模式（5）、供应链金融（4）、平台（1）、变现（1）
-- 高频平台：Obsidian（9）、GitHub（7）、课程（2）、播客（1）、小红书（1）、公众号（1）
+- 高频工具：Codex（60）、Obsidian（45）、GitHub（42）、MCP（13）、Claude Code（11）、MarkDownload（2）
+- 高频工作流：Workflow（22）、自动化（5）、Research Cleaner（3）、内容创作（2）、知识管理（1）
+- 高频商业模式：供应链金融（26）、平台（16）、商业模式（6）、变现（2）
+- 高频平台：Obsidian（45）、GitHub（42）、公众号（13）、小红书（4）、课程（3）、播客（1）
 
 ## 建议
 

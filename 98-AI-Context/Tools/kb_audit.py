@@ -87,7 +87,13 @@ def main() -> int:
                 broken.append((note, target))
 
     exempt_orphans = {"README", "欢迎", "Topic Hub Template"}
-    orphans = [note for note in notes if incoming[note] == 0 and outgoing[note] == 0 and note.stem not in exempt_orphans]
+    orphans = [
+        note for note in notes
+        if incoming[note] == 0
+        and outgoing[note] == 0
+        and note.stem not in exempt_orphans
+        and "00-Inbox/Downloaded" not in note.relative_to(VAULT).as_posix()
+    ]
 
     conflicts = []
     for note, text in contents.items():

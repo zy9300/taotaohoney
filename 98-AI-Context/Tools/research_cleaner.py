@@ -113,8 +113,15 @@ class CleanResult:
 
 
 def scalar(frontmatter: str, key: str) -> str:
-    match = re.search(rf"(?mi)^\s*{re.escape(key)}\s*:\s*[\"']?(.*?)[\"']?\s*$", frontmatter)
-    return match.group(1).strip() if match else ""
+    match = re.search(rf"(?mi)^[ \t]*{re.escape(key)}[ \t]*:[ \t]*[\"']?(.*?)[\"']?[ \t]*$", frontmatter)
+    value = match.group(1).strip() if match else ""
+    if value:
+        return value
+    list_match = re.search(
+        rf"(?mi)^[ \t]*{re.escape(key)}[ \t]*:[ \t]*\n[ \t]*-[ \t]*[\"']?(.*?)[\"']?[ \t]*$",
+        frontmatter,
+    )
+    return list_match.group(1).strip() if list_match else ""
 
 
 def safe_name(value: str) -> str:
@@ -153,11 +160,14 @@ def classify(text: str) -> tuple[str, int]:
     return scored[0][1], scored[0][0]
 
 
-def detect_topics(text: str) -> list[tuple[str, str]]:
-    lowered = f" {text.lower()} "
+def detect_topics(title: str, text: str) -> list[tuple[str, str]]:
+    lowered_title = f" {title.lower()} "
+    lowered = f" {URL_RE.sub(' ', text).lower()} "
     found = []
     for slug, (hub, terms) in TOPICS.items():
-        if any(term.lower() in lowered for term in terms):
+        title_hit = any(term.lower() in lowered_title for term in terms)
+        body_hits = sum(lowered.count(term.lower()) for term in terms)
+        if title_hit or body_hits >= 2:
             found.append((slug, hub))
     return found
 
@@ -209,7 +219,7 @@ def clean_file(path: Path, promote: bool) -> CleanResult:
     published = scalar(frontmatter, "published") or scalar(frontmatter, "date")
     captured = scalar(frontmatter, "captured") or datetime.fromtimestamp(path.stat().st_mtime).isoformat(timespec="minutes")
     classification, confidence = classify(f"{title}\n{body}")
-    topics = detect_topics(f"{title}\n{body}")
+    topics = detect_topics(title, body)
     topic_tags = [f"topic/{slug}" for slug, _ in topics]
     status = "processed" if confidence >= 2 else "needs-review"
     digest = hashlib.sha256(raw.encode("utf-8")).hexdigest()
@@ -264,4 +274,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

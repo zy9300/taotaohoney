@@ -9,3 +9,6 @@ tags: [hub/topic, topic/codex]
 
 关联：[[Agent Hub]]、[[MCP Hub]]、[[GitHub Hub]]、[[Obsidian Hub]]。
 
+## 代表资料
+
+- [[04-Research/05-AI/Codex/我把 Codex 接进 Obsidian，做了一个会自动整理资料的 AI 知识库]]
